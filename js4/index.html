@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ img{
+    width: 25%;
+    height: 50vh;
+    display: block;
+ }
+</style>
+
+<body>
+    <input type="text" placeholder="name" id="username">
+    <button onclick="sayHello()">Click Me</button>
+    <p id="status"></p>
+    <img src="on.jpeg" id="blub" alt="">
+    <button onclick="off()">off</button>
+    <button onclick="on()">On</button>
+
+    <Script>
+         function sayHello() {
+            const username = document.getElementById("username").value
+            const status = document.getElementById("status");
+            status.textContent = `Welcome ${username}`;
+            status.style.color = "pink";
+         }
+         function off() {
+            const blub = document.getElementById("blub")
+            blub.src = "off.jpeg"
+         }
+         function on(){
+            const blub = document.getElementById("blub")
+            blub.src = "on.jpeg"
+         }
+    </Script>
+</body>
+</html>
